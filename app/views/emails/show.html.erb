@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<h1 class="text-center mt-4"> Objet:  <%= @email.object %> </h1>
+<h5 class="text-center mt-4"> Contenus:  <%= @email.body %> </h5>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>

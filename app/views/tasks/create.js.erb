@@ -1,0 +1,4 @@
+
+alert("Ta tache à été ajouté!")
+
+document.getElementById("tasks-group").querySelector("div.card-<%=@task.category_id%> ul").insertAdjacentHTML("beforeend", "<%= j render 'task_list', task: @task %>");

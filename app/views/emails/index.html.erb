@@ -1,0 +1,12 @@
+<div class="container">
+    <button class="btn btn-dark"> <%= link_to "Recevoir un Email",  emails_path, method: :post, remote: true%>  </button>
+        <div class="columns" id= "email_list">
+            <div class="left-part-object-email">
+                <% @emails.each do |email|  %>
+                  <a href="<%=  email_path(email.id) %>" class="email-<%= email.id  %>" data-method="GET", data-remote="true"> <%= email.object  %> </a><br>
+                <% end  %>
+            </div>
+              <div class="right-part-body-email" id="body-show">
+              </div>
+              </div>
+</div>
